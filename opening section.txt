@@ -1,0 +1,11 @@
+project title:        Weather App
+
+name:                 JUI-FENG LU
+
+GitHub username:        rayfong61
+
+edX username:        RF_2409_E315
+
+city:             Taoyuan, Taiwan
+
+Date of this video:    2024/12/16
