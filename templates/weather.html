@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Weather App
+{% endblock %}
+
+{% block main %}
+  <div class="container-fluid text-white weather-card rounded-container" >
+
+      <div class="row" >
+        <div id="weather-location" class="col"><b> {{ name }}{% if region %}, {{ region }}{% endif %}, {{ country }}</b></div>
+
+        <div id="weather-day" class="col">
+          <div>{{ day0 }}</div>
+          <div id="weather-last_updated">last updated: <span id="last-updated">{{ last_updated }}</span>
+          </div>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <div class="col text-white">
+        <div><img id="weather-icon" src="https:{{ icon_c }}" alt="Weather Icon"></div>
+        <div id="weather-description">{{ description }}</div>
+      </div>
+      <div class="col text-white">
+        <div id="weather-temp"><b>{{ temp_c }} °C</b></div>
+
+        <table class=" table-borderless" style="margin: 10px auto;">
+
+          <tr>
+            <td style="text-align: left;">Wind:</td>
+            <td style="text-align: right;">{{ wind }} km/h</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">Daily chance of rain:</td>
+            <td style="text-align: right;">{{ daily_chance_of_rain }} %</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">Humidity:</td>
+            <td style="text-align: right;">{{ humidity }} %</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">High / Low:</td>
+            <td style="text-align: right;">{{ temp_h_0}}°/ {{ temp_l_0 }}°</td>
+          </tr>
+        </table>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="row" id="weather-forecast">
+      {% for day in forecast_data %}
+      <div class="col forecast-item">
+        <div>{{ day.day }} {{ day.day_of_month }}</div>
+        <div id="forecast_icon"><img src="{{ day.icon }}" alt="Weather icon"></div>
+        <div>{{ day.temp_h }}°/ {{ day.temp_l }}°</div>
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </div>
+
+
+{% endblock %}
