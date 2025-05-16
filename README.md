@@ -1,5 +1,5 @@
 # Weather App
-#### Video Demo:  <https://www.youtube.com/watch?v=y5gASx25TsU>
+#### Video Demo:  <https://youtu.be/NNO4vuKKK4U>
 
 Weather App is a simple web-based application that allows users to search for current and forecast weather for any location in the world. It also stores the cities that users have searched for and displays the latest 5 searched cities' current weather on the header.
 
